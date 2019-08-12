@@ -8,3 +8,11 @@ const map = new mapboxgl.Map({
   zoom: 12, // starting zoom
   style: "mapbox://styles/mapbox/streets-v10" // mapbox has lots of different map styles available.
 });
+
+var markerElement = document.createElement('div');
+markerElement.style.width = "32px";
+markerElement.style.height = "39px";
+markerElement.style.backgroundImage = "url(http://i.imgur.com/WbMOfMl.png)";
+
+new mapboxgl.Marker(markerElement).setLngLat([-74.009, 40.705]).addTo(map);
+console.log("Hello");
